@@ -31,13 +31,31 @@ main {
 }
 .label {
   position: absolute;
-  top: 35vh;
+  top: 43vh;
   left: 15vw;
   background-color: var(--main-bg-color);
   padding: 0.5vh 1vw 0.5vh 30vw;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .label {
+    position: absolute;
+    top: 33vh;
+    left: 15vw;
+    background-color: var(--main-bg-color);
+    padding: 0.5vh 1vw 0.5vh 20vw;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+  }
 }
 
 label {
