@@ -23,6 +23,7 @@
 .right-content {
   width: 75%;
   float: right;
+  box-sizing: border-box;
   padding: 1.5rem;
 }
 
@@ -50,4 +51,17 @@ hr.solid {
   width: 100%;
   min-height: 28px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .left-tabs {
+    display: none;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+  table {
+    font-size: 0.7rem;
+    max-width: 100vw;
+  }
 }
