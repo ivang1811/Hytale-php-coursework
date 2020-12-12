@@ -24,14 +24,24 @@ main {
 .label {
   position: absolute;
   top: 40vh;
-  left: 25vw;
+  left: 24.5vw;
   background-color: var(--main-bg-color);
   padding: 0.5vh 1vw 0.5vh 30vw;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
 }
-
+@media screen and (max-width: 700px) {
+  .form-block {
+    width: 70vw;
+  }
+  .label {
+    top: 40vh;
+    left: 14.5vw;
+    padding: 0.5vh 1vw 0.5vh 15vw;
+    text-align: center;
+  }
+}
 form {
   margin-top: 15vh;
   width: 75%;
