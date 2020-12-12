@@ -1,0 +1,53 @@
+.heading {
+  margin-top: 5vh;
+  width: 100%;
+  border-bottom: 2px solid #bbbbbb9f;
+}
+.heading h1 {
+  font-family: Roboto;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #474747;
+  margin-left: 10vw;
+}
+
+.left-tabs {
+  width: 20%;
+  float: left;
+  border-right: 2px solid #bbbbbb9f;
+  text-align: center;
+}
+
+.right-content {
+  width: 75%;
+  float: right;
+  padding: 1.5rem;
+}
+
+.tab-btn {
+  display: inline-block;
+  color: var(--accent-color);
+  width: 70%;
+  margin-top: 1vh;
+}
+.selected-tab {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+hr.solid {
+  width: 80%;
+  border-top: 1px solid #bbbbbb9f;
+}
+.right-content h1 {
+  font-weight: 600;
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  box-sizing: border-box;
+}

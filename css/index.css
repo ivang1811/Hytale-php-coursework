@@ -1,0 +1,162 @@
+main {
+  padding: 3vh 10vw 3vh 10vw;
+}
+
+/* Buttons */
+
+.btn-white {
+  background-color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: none;
+  padding: 0.5vh 2vw 0.5vh 2vw;
+}
+.btn-white:active {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.btn-white:focus {
+  box-shadow: none;
+}
+
+/* Servers table */
+#phone-table {
+  display: none;
+}
+.servers-header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+}
+tbody {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td,
+.table th {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+.col-rank {
+  width: 10%;
+}
+.col-name {
+  width: 20%;
+}
+.col-server {
+  width: 40%;
+}
+.col-player {
+  width: 10%;
+}
+.col-status {
+  width: 20%;
+}
+
+.img-fluid {
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .col-rank {
+    width: 10%;
+  }
+  .col-name {
+    width: 10%;
+  }
+  .col-server {
+    width: 50%;
+  }
+  .col-player {
+    width: 10%;
+  }
+  .col-status {
+    width: 20%;
+  }
+  main {
+    padding: 3vh 5vw 3vh 5vw;
+  }
+  .table td,
+  .table th {
+    padding: 0.5rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+  }
+}
+@media screen and (max-width: 600px) {
+  .col-rank {
+    width: 5%;
+  }
+  .col-name {
+    width: 5%;
+  }
+  .col-server {
+    width: 70%;
+  }
+  .col-player {
+    width: 10%;
+  }
+  .col-status {
+    width: 10%;
+  }
+  main {
+    padding: 3vh 1vw 3vh 1vw;
+  }
+  #phone-table {
+    display: block;
+  }
+  #full-table {
+    display: none;
+  }
+  .table td,
+  .table th {
+    padding: 0.3rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+  }
+  .btn-white {
+    font-size: 0.7rem;
+    padding: 0.5vh 1.5vw 0.5vh 1.5vw;
+  }
+}
+.server-ip {
+  background-color: var(--main-bg-color);
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-bg-color);
+}
+.active-sort {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+/* phone */
+.phone-info {
+  background-color: #fbfbfa;
+  color: #2e1527;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  list-style: none;
+  order: 3;
+  overflow: hidden;
+  padding: 10px 20px;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+}
+.rank {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #ffffff;
+}
+.phone-info li {
+  margin-left: 2vw;
+}
