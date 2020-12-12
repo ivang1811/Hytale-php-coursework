@@ -111,6 +111,9 @@ tbody {
   #full-table {
     display: none;
   }
+  .btn-group {
+    display: none;
+  }
   .table td,
   .table th {
     padding: 0.3rem;
@@ -137,26 +140,44 @@ footer {
 }
 /* phone */
 .phone-info {
-  background-color: #fbfbfa;
+  background-color: #b9b9b8;
   color: #2e1527;
   -ms-flex-positive: 1;
   flex-grow: 1;
   list-style: none;
   order: 3;
   overflow: hidden;
-  padding: 10px 20px;
   width: 70%;
+  height: 4rem;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0.5rem;
   float: right;
 }
 .rank {
   width: 30%;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   display: flex;
   color: #ffffff;
+  float: left;
+  font-size: 1.5rem;
+  height: 4rem;
+  background-color: var(--main-bg-color);
 }
 .phone-info li {
-  margin-left: 2vw;
+  width: 50%;
+}
+i {
+  color: var(--main-bg-color);
+}
+@media screen and (max-width: 350px) {
+  .rank {
+    font-size: 1rem;
+  }
+  .phone-info {
+    font-size: 0.8rem;
+  }
 }

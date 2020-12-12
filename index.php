@@ -37,10 +37,10 @@
                           <span>'. $counter .'</span>
                         </div>
                         <ul class="phone-info">
-                          <li>'.$row['name'].'</li>
-                          <li>'.$row['players'].'</li>
-                          <li>'.$row['status'].'</li>
-                          <li>'.$row['votes'].'</li>
+                          <li><i class="fas fa-info-circle"></i>  '.$row['name'].'</li>
+                          <li><i class="fas fa-user-friends"></i>  '.$row['players'].'</li>
+                          <li><i class="fas fa-info-circle"></i>  '.$row['status'].'</li>
+                          <li><i class="fas fa-poll"></i>  '.$row['votes'].'</li>
                         </ul>
                       </article>';
                       $counter += 1;
