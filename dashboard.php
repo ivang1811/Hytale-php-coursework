@@ -15,10 +15,10 @@
       <section class="left-tabs">
         <button type="button" class="btn tab-btn selected-tab">Overview</button>
         <hr class="solid" />
-        <button type="button" class="btn tab-btn">Favorite Servers</button>
+        <!-- <button type="button" class="btn tab-btn">Favorite Servers</button>
         <button type="button" class="btn tab-btn">Your Servers</button>
         <hr class="solid" />
-        <button type="button" class="btn tab-btn">Edit Account</button>
+        <button type="button" class="btn tab-btn">Edit Account</button> -->
       </section>
       <section class="right-content">
         <h2 class="display-5">Manage servers</h2>
