@@ -11,6 +11,7 @@
   background-color: var(--main-bg-color);
   margin-right: 5vw;
   margin-top: 5vh;
+  margin-bottom: 1.5vh;
   display: flex;
   justify-content: right;
   text-align: right;

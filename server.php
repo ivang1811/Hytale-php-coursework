@@ -10,6 +10,23 @@
                   require_once "./resources/config.php";
                   $current_server = $_GET["id"];
                   $sql = "SELECT name,description,image FROM servers where id=$current_server";
+                  $vote_status = "";
+                  if(isset($_GET["vote_status"])) {
+                    $vote_status = $_GET["vote_status"];
+                  }
+
+
+
+                    if ($vote_status == "success") {
+                        $vote_status_message = "The vote was Successfully registered.";
+                    } else if ($vote_status == "failed") {
+                      $vote_status_message = "The vote failed to register, You may have voted more than 3 times for this server.";
+                      $vote_status = "danger";
+                    } else {
+                    $vote_status_message = "";
+                  }
+
+
 
                   $result = mysqli_query($link, $sql);
 
@@ -23,6 +40,10 @@
                       <div class="label">
                       <h1>'. $row["name"].'</h1>
                       </div>
+
+                      <div class="alert alert-'. $vote_status .'" role="alert">
+                      '. $vote_status_message .'
+                    </div>
                       <div class="server-info">
                       <img
                           class="large-image"
@@ -36,8 +57,7 @@
                       <div class="server-buttons">
                       <a type="button" class="btn btn-primary" href="./includes/vote.inc.php?id='. $current_server .'">Vote</a>
                       </div>
-                      </div>
-        
+                      </div>        
         
                       </article>';
                       $counter += 1;

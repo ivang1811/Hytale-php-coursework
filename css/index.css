@@ -60,6 +60,15 @@ tbody {
 .img-fluid {
   width: 100%;
 }
+tbody {
+  background-color: #f5f6f7;
+}
+.table td {
+  border-top: none;
+}
+.table th {
+  border-top: none;
+}
 .ranking {
   background-color: #222;
   display: inline-block;

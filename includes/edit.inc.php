@@ -10,8 +10,9 @@
   $owner = $_SESSION["id"];
   $server_id = $_GET["id"];
 
-  $sql = "UPDATE servers set name='$server_name,players='$player_amount',
+  $sql = "UPDATE servers set name='$server_name',players='$player_amount',
   status='$server_status',summary_description='$server_summary',description='$server_description' WHERE id=$server_id ";
+  echo $sql;
 
   if (mysqli_query($link, $sql)) {
     echo "Record updated successfully";
