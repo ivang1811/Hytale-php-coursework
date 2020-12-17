@@ -88,6 +88,6 @@
 
 <script>
     var a = document.getElementById('create-server-button');
-    a.href = `./serverform.php?user=${userid}`
+    a.href = `./serverform.php`
     </script>
 </html>

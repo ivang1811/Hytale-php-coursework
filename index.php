@@ -39,7 +39,7 @@
                         <ul class="phone-info">
                           <li><i class="fas fa-info-circle"></i>  '.$row['name'].'</li>
                           <li><i class="fas fa-user-friends"></i>  '.$row['players'].'</li>
-                          <li><i class="fas fa-info-circle"></i>  '.$row['status'].'</li>
+                          <li><i class="fas fa-tachometer-alt"></i> '.$row['status'].'</li>
                           <li><i class="fas fa-poll"></i>  '.$row['votes'].'</li>
                         </ul>
                       </article>';
@@ -53,12 +53,12 @@
       <table class="table" id="full-table">
         <thead class="servers-header">
           <tr>
-            <th class="col-rank" scope="col">Rank</th>
-            <th class="col-name" scope="col">Name</th>
+            <th class="col-rank" scope="col"><i class="fas fa-angle-double-up"></i> Rank</th>
+            <th class="col-name" scope="col"><i class="fas fa-info-circle"></i> Name</th>
             <th class="col-server" scope="col">Server</th>
-            <th class="col-player" scope="col">Player</th>
-            <th class="col-status" scope="col">Status</th>
-            <th class="col-vote" scope="col">Votes</th>
+            <th class="col-player" scope="col"><i class="fas fa-user-friends"></i>  Player</th>
+            <th class="col-status" scope="col"><i class="fas fa-tachometer-alt"></i> Status</th>
+            <th class="col-vote" scope="col"><i class="fas fa-poll"></i> Votes</th>
           </tr>
         </thead>
         <tbody>

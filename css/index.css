@@ -102,6 +102,7 @@ tbody {
   .col-status {
     width: 10%;
   }
+
   main {
     padding: 3vh 1vw 3vh 1vw;
   }
@@ -170,7 +171,8 @@ footer {
 .phone-info li {
   width: 50%;
 }
-i {
+
+.phone-info i {
   color: var(--main-bg-color);
 }
 @media screen and (max-width: 350px) {

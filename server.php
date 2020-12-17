@@ -19,29 +19,34 @@
                   if ($result_check > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                       echo '            
-                      <section class="server-block">
+                      <article class="server-block">
                       <div class="label">
-                            <h4 class="display-6">'. $row["name"].'</h4>
+                      <h1>'. $row["name"].'</h1>
                       </div>
-                          <section>
-                          <img
+                      <div class="server-info">
+                      <img
                           class="large-image"
                           src="uploads/'. $row["image"] .'"
                           alt="Responsive image"
-                          />
-                          <div id="server-description">
-                              <h1>Server Description</h1>
-                              <p>'. $row["description"] .'</p>
-                          </div>
-                          <a type="button" class="btn btn-primary" href="./includes/vote.inc.php?id='. $current_server .'">Vote</a>
-                          </section>';
+                      />
+                      <div id="server-description">
+                          <h1>Server Description</h1>
+                          <p>'. $row["description"] .'</p>
+                      </div>
+                      <div class="server-buttons">
+                      <a type="button" class="btn btn-primary" href="./includes/vote.inc.php?id='. $current_server .'">Vote</a>
+                      </div>
+                      </div>
+        
+        
+                      </article>';
                       $counter += 1;
                     }
                   }
 
 
               ?>
-      
+        
     </main>
 
 <?php    

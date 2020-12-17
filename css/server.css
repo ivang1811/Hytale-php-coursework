@@ -2,20 +2,38 @@
   background-color: #ffffff;
   margin-top: 5vh;
   width: 50vw;
-  display: flex;
-  justify-content: center;
   text-align: left;
   border-radius: 0.4rem;
   margin-bottom: 5rem;
-  padding: 10vh 10vw;
+}
+
+.server-block .label {
+  background-color: var(--main-bg-color);
+  margin-right: 5vw;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: right;
+  text-align: right;
+}
+
+.server-block .label h1 {
+  font-size: 2rem;
+  color: #eeecec;
+  font-weight: 600;
+  margin-left: 5vw;
 }
 
 .jumbotron {
   margin: 0;
 }
-
+.server-info {
+  padding: 10%;
+}
 .large-image {
   width: 100%;
+}
+.server-buttons {
+  padding: 5% 20% 5% 20%;
 }
 
 #server-description {
@@ -29,36 +47,26 @@ main {
   justify-content: center;
   padding: 0;
 }
-.label {
-  position: absolute;
-  top: 43vh;
-  left: 15vw;
-  background-color: var(--main-bg-color);
-  padding: 0.5vh 1vw 0.5vh 30vw;
-  color: #ffffff;
-  font-weight: 700;
-  text-align: center;
-}
-@media screen and (max-width: 700px) {
-  h1 {
-    font-weight: 700;
+@media screen and (max-width: 750px) {
+  #server-description h1 {
+    font-size: 1.5rem;
+  }
+  #server-description p {
     font-size: 1rem;
   }
-}
-@media screen and (max-width: 600px) {
-  .label {
-    position: absolute;
-    top: 33vh;
-    left: 15vw;
-    background-color: var(--main-bg-color);
-    padding: 0.5vh 1vw 0.5vh 20vw;
-    color: #ffffff;
-    font-weight: 700;
-    text-align: center;
+  .server-block {
+    width: 75vw;
   }
 }
-
-label {
-  font-weight: 700;
-  font-size: 1.2rem;
+@media screen and (max-width: 450px) {
+  #server-description h1 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  #server-description p {
+    font-size: 0.8rem;
+  }
+  .server-block {
+    width: 90vw;
+  }
 }
