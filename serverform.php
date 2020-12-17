@@ -71,7 +71,10 @@ if (!empty($_GET['edit'])) {
 
           <div class="form-group">
             <label for="server-summary">Server status:</label>
-            <textarea type="text" name="server_status" class="form-control input-block-level" id="server-status" placeholder="e.g We would like to invite you to join us on this amazing server."><?php echo (!empty($_GET['edit'])) ? $status  :  ""; ?></textarea>
+            <select class="form-select form-control" id="server-status" name="server_status" aria-label="Server status select">
+              <option value="Online" selected>Online</option>
+              <option value="Offline">Offline</option>
+            </select>
             <span class="help-block"></span>
           </div>
 

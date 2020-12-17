@@ -75,8 +75,8 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                       echo '            
                       <tr data-created="'. $row['created_at'] . '">
-                        <th scope="row">'. $counter .'</th>
-                        <td>'.$row['name'].'</td>
+                        <th scope="row" ><span class="ranking">'. $counter .'</span></th>
+                        <td><span class="bolder">'.$row['name'].'</span></td>
                         <td>
                         <a href="./server.php?id='. $row['id'] . '">
                           <img
@@ -87,8 +87,8 @@
                           </a>
                           <span>'.$row['summary_description'].'</span>
                         </td>
-                        <td>'.$row['players'].'</td>
-                        <td>'.$row['status'].'</td>
+                        <td><span class="bolder">'.$row['players'].'</span></td>
+                        <td><span class="status '.$row['status'].' ">'.$row['status'].'</span></td>
                         <td>'.$row['votes'].'</td>
                       </tr>';
                       $counter += 1;

@@ -60,6 +60,28 @@ tbody {
 .img-fluid {
   width: 100%;
 }
+.ranking {
+  background-color: #222;
+  display: inline-block;
+  padding: 10px 15px 10px 14px;
+  line-height: 16px;
+  border-radius: 3px;
+  color: #ffffff;
+}
+.bolder {
+  font-weight: 700;
+}
+.status {
+  background-color: #a02009;
+  display: inline-block;
+  padding: 10px 15px 10px 14px;
+  line-height: 16px;
+  border-radius: 3px;
+  color: #ffffff;
+}
+.Online {
+  background-color: #09a016;
+}
 @media screen and (max-width: 900px) {
   .col-rank {
     width: 10%;
