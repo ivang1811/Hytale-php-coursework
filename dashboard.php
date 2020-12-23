@@ -8,10 +8,11 @@
 }
 ?>
 <link rel="stylesheet" href="./css/dashboard.css" />
-    <main>
-      <div class="heading">
+<div class="heading">
         <h1>Your Account</h1>
       </div>
+    <main>
+
       <section class="left-tabs">
         <button type="button" class="btn tab-btn selected-tab">Overview</button>
         <hr class="solid" />
