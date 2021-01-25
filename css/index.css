@@ -21,9 +21,6 @@ main {
 }
 
 /* Servers table */
-#phone-table {
-  display: none;
-}
 .servers-header {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -91,6 +88,61 @@ tbody {
 .Online {
   background-color: #09a016;
 }
+
+.server-ip {
+  background-color: var(--main-bg-color);
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: var(--main-bg-color);
+}
+.active-sort {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+/* phone */
+#phone-table {
+  display: none;
+}
+
+.rank {
+  width: 30%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #ffffff;
+  float: left;
+  font-size: 1.5rem;
+  height: 4rem;
+  background-color: var(--main-bg-color);
+}
+.phone-info {
+  background-color: #b9b9b8;
+  color: #2e1527;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  list-style: none;
+  order: 3;
+  overflow: hidden;
+  width: 70%;
+  height: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  float: right;
+}
+.phone-info li {
+  width: 50%;
+}
+
+.phone-info i {
+  color: var(--main-bg-color);
+}
+
 @media screen and (max-width: 900px) {
   .col-rank {
     width: 10%;
@@ -156,55 +208,6 @@ tbody {
     font-size: 0.7rem;
     padding: 0.5vh 1.5vw 0.5vh 1.5vw;
   }
-}
-.server-ip {
-  background-color: var(--main-bg-color);
-  width: 100%;
-}
-
-/* Footer */
-footer {
-  background-color: var(--main-bg-color);
-}
-.active-sort {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-}
-/* phone */
-.phone-info {
-  background-color: #b9b9b8;
-  color: #2e1527;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  list-style: none;
-  order: 3;
-  overflow: hidden;
-  width: 70%;
-  height: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  float: right;
-}
-.rank {
-  width: 30%;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  color: #ffffff;
-  float: left;
-  font-size: 1.5rem;
-  height: 4rem;
-  background-color: var(--main-bg-color);
-}
-.phone-info li {
-  width: 50%;
-}
-
-.phone-info i {
-  color: var(--main-bg-color);
 }
 @media screen and (max-width: 350px) {
   .rank {

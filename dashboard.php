@@ -37,6 +37,7 @@
           <tbody>
               <?php 
                   require_once "./resources/config.php";
+                  // Get the current user logged in and use that to get all the servers owned by that user
                   $current_user = $_SESSION["id"];
                   $sql = "SELECT id, status, name FROM servers where owner='$current_user'";
 
@@ -44,7 +45,7 @@
 
                   $result_check = mysqli_num_rows($result);
                   $counter = 0;
-
+                
                   if ($result_check > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                       echo '            
@@ -55,7 +56,7 @@
                       <td>'. $row['name'] .'</td>
                       <td>
                         <a type="button" href="serverform.php?edit=true&server_id='. $row['id'] .'" class="btn btn-primary">Edit</a>
-                        <a type="button" class="btn btn-danger delete-server" href="./includes/delete.inc.php?id='. $row['id'] .'">Delete</a>
+                        <a type="button" class="btn btn-danger delete-server" onclick="return confirm(`Are you sure you want to delete '. $row['name'] .'?`)" href="./includes/delete.inc.php?id='. $row['id'] .'">Delete</a>
                       </td>
                       </tr>';
                       $counter += 1;

@@ -7,29 +7,33 @@
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-white active-sort" onclick="sortTable('ranked',this)">Ranked</button>
         <button type="button" class="btn btn-white" onclick="sortTable('newest',this)">Newest</button>
-        <button type="button" class="btn btn-white" onclick="sortTable('alphabetical',this)">alphabetical</button>
+        <button type="button" class="btn btn-white" onclick="sortTable('alphabetical',this)">By Name</button>
         <button type="button" class="btn btn-white" onclick="sortTable('players',this)">Players</button>
       </div>
       <div class="table" id="phone-table">
           <?php 
+          // Script used to render mobile version of the server Data
                   require_once "./resources/config.php";
+                  // Runs sql query to get all the data from the database
                   $sql = "SELECT id, status, name, image,players,votes, created_at  FROM servers ORDER BY votes DESC";
 
                   $result = mysqli_query($link, $sql);
 
                   $result_check = mysqli_num_rows($result);
                   $counter = 1;
-
+                  // Checks if the there are any results from the database run the script
                   if ($result_check > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
+                      // Run a loop over each element and create a phone-server div with the information
+                      // of that row in the element
                       echo '            
-                      <article class="phone-server"  data-created="'. $row['created_at'] . '">
+                      <div class="phone-server"  data-created="'. $row['created_at'] . '">
                         <div>
                         <a href="./server.php?id='. $row['id'] . '">
                           <img
                             src="uploads/'.$row['image'].'"
                             class="img-fluid"
-                            alt="Responsive image"
+                            alt="Server Banner"
                           />
                           </a>
                         </div>
@@ -42,7 +46,7 @@
                           <li><i class="fas fa-tachometer-alt"></i> '.$row['status'].'</li>
                           <li><i class="fas fa-poll"></i>  '.$row['votes'].'</li>
                         </ul>
-                      </article>';
+                      </div>';
                       $counter += 1;
                     }
                   }
@@ -63,16 +67,19 @@
         </thead>
         <tbody>
           <?php 
+          // Script used to render desktop version of the server Data
                   require_once "./resources/config.php";
                   $sql = "SELECT id, status, name, image,players, summary_description,votes, created_at  FROM servers ORDER BY votes DESC";
 
                   $result = mysqli_query($link, $sql);
-
+                 // Runs sql query to get all the data from the database
                   $result_check = mysqli_num_rows($result);
                   $counter = 1;
-
+                    // Checks if the there are any results from the database run the script
                   if ($result_check > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
+                      // Run a loop over each element and create a phone-server div with the information
+                      // of that row in the element
                       echo '            
                       <tr data-created="'. $row['created_at'] . '">
                         <th scope="row" ><span class="ranking">'. $counter .'</span></th>
@@ -131,8 +138,8 @@ function sortTable(method, element) {
         console.log(x)
       }
       else if (method == "players"){
-        x = parseInt(rows[i].getElementsByTagName("TD")[2].innerHTML);
-        y = parseInt(rows[i + 1].getElementsByTagName("TD")[2].innerHTML);
+        x = parseInt(rows[i].getElementsByTagName("TD")[2].getElementsByTagName("SPAN")[0].innerHTML);
+        y = parseInt(rows[i + 1].getElementsByTagName("TD")[2].getElementsByTagName("SPAN")[0].innerHTML);
         console.log(x)
       }
       //check if the two rows should switch place:

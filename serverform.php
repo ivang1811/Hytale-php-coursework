@@ -17,11 +17,12 @@ require_once "./resources/config.php";
 <?php 
 if (!empty($_GET['edit'])) {
   $user  = $_SESSION["id"];
+  // Get the server information for the server in query
   $current_server = $_GET['server_id'];
   $sql = "SELECT id,name,description,owner,summary_description,status,players FROM servers where id='$current_server'";
   $result = mysqli_query($link, $sql);
   $server = mysqli_fetch_row($result);
-
+  // define variables from the database data
   if ($user == $server[3]) {
     $name = $server[1];
     $description = $server[2];
@@ -40,12 +41,6 @@ if (!empty($_GET['edit'])) {
     <main>
 
       <section class="left-tabs">
-      <select name="cars" class="Select-tab" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
       </section>
       <section class="right-content">
         <h1>+ New Server</h1>
@@ -65,7 +60,7 @@ if (!empty($_GET['edit'])) {
 
           <div class="form-group">
             <label for="server-summary">Player Amount:</label>
-            <input value="<?php echo (!empty($_GET['edit'])) ? $players  :  ""; ?>" type="number" name="player_amount" class="form-control input-block-level" id="server-players" placeholder="e.g We would like to invite you to join us on this amazing server."></input>
+            <input  value="<?php echo (!empty($_GET['edit'])) ? $players  :  ""; ?>" type="number" min="1" max="5000" name="player_amount" class="form-control input-block-level" id="server-players" placeholder="e.g We would like to invite you to join us on this amazing server."></input>
             <span class="help-block"></span>
           </div>
 
@@ -80,7 +75,7 @@ if (!empty($_GET['edit'])) {
 
           <div class="form-group">
             <label for="server-summary">Short server Summary (150 characters):</label>
-            <textarea  type="text" name="server_summary" class="form-control input-block-level" id="server-summary" placeholder="e.g We would like to invite you to join us on this amazing server."><?php echo (!empty($_GET['edit'])) ? $summary_description  :  ""; ?></textarea>
+            <textarea  type="text" name="server_summary" maxlength="150" class="form-control input-block-level" id="server-summary" placeholder="e.g We would like to invite you to join us on this amazing server."><?php echo (!empty($_GET['edit'])) ? $summary_description  :  ""; ?></textarea>
             <span class="help-block"></span>
           </div>
 
